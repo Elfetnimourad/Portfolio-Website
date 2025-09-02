@@ -45,7 +45,7 @@ function Myprojects() {
         />
         <CardContent>
           <Typography gutterBottom variant="h6" component="div">
-            React + Typescript
+            Vanilla JS
           </Typography>
        
         </CardContent>
@@ -61,7 +61,7 @@ function Myprojects() {
         />
         <CardContent>
           <Typography gutterBottom variant="h6" component="div">
-            Lizard
+            React
           </Typography>
        
         </CardContent>
@@ -77,7 +77,7 @@ function Myprojects() {
         />
         <CardContent>
           <Typography gutterBottom variant="h6" component="div">
-            Lizard
+            React
           </Typography>
        
         </CardContent>
@@ -93,7 +93,7 @@ function Myprojects() {
         />
         <CardContent>
           <Typography gutterBottom variant="h6" component="div">
-            Lizard
+            React
           </Typography>
        
         </CardContent>
@@ -109,7 +109,7 @@ function Myprojects() {
         />
         <CardContent>
           <Typography gutterBottom variant="h6" component="div">
-            Lizard
+            Js + Ts
           </Typography>
        
         </CardContent>
