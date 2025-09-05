@@ -1,0 +1,13 @@
+.skills{
+    display: grid !important;
+    grid-template-columns: 33% 33% 33%;
+    width: 100%;
+    gap: 20px;
+    padding-top: 30px;
+    padding-left: 15px;
+        height: 50vh;
+
+}
+.about{
+    height: 100vh;
+}
