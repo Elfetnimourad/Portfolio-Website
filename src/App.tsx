@@ -6,19 +6,30 @@ import About from './components/About';
 import Myprojects from './components/Myprojects';
 import ContactMe from './components/ContactMe';
 import Footer from './components/Footer';
+import { BrowserRouter as Router, Routes, Route } from "react-router-dom";
 
 function App() {
 
   return (
-    <div className='app d-flex flex-column'>
-       <Navbar/>
+        <Router>
 
-   <Home/>
-   <About/>
-      <Myprojects/>
-<ContactMe/>
-<Footer/>
+    <div className='app d-flex flex-column '>
+ <Navbar/>
+
+  <Routes>
+          
+
+        <Route path="/" element={<Home />} />
+        <Route path="About" element={<About />} />
+        <Route path="Myprojects" element={<Myprojects />} />
+                <Route path="ContactMe" element={<ContactMe />} />
+
+      </Routes>
+        <Footer/>
+
     </div>
+        </Router>
+
   )
 }
 

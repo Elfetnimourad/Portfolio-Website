@@ -45,4 +45,5 @@ body{
 .app{
 height: auto;
 color: wheat;
+width:100% !important;
 }
