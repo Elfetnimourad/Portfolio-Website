@@ -1,9 +1,9 @@
 .home{
   display: flex;
-  height: 90vh !important;
+  height: 80vh !important;
   width: 200vh;
   align-items: center;
-  color: white;
+  color: white !important;
   justify-content: space-evenly !important;
 }
 

@@ -3,6 +3,7 @@
   max-width: 1100px;
   margin: 0 auto;
   line-height: 1.7;
+  height:75vh;
 }
 
 .title {
@@ -55,4 +56,15 @@
   background: #0077ff;
   color: #fff;
   cursor: default;
+}
+.cv-link {
+  color: #4e54c8;
+  font-weight: 600;
+  text-decoration: none;
+  transition: color 0.3s ease;
+}
+
+.cv-link:hover {
+  color: #8f94fb;
+  text-decoration: underline;
 }

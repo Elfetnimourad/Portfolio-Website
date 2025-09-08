@@ -6,6 +6,7 @@ import './contact.css';
 import React, { useState } from 'react';
 import Modal from '@mui/material/Modal';
 import Divider from '@mui/material/Divider';
+import { motion } from 'framer-motion';
 
  
 function ContactMe() {
@@ -41,7 +42,7 @@ return (
    }
   
   return (
-    <>
+    <motion.div initial={{width:0}} animate={{width:'100%'}} exit={{x:'100%',transition:{duration:0.3,type:'tween'}}}>
    <div className="d-flex flex-row contact align-items-center">
        {submitted && name && email && message &&  
        <Modal
@@ -108,7 +109,7 @@ required
 </div>
   <Divider style={{borderColor:'white'}}></Divider>
 
-   </>
+   </motion.div>
   )
 }
 

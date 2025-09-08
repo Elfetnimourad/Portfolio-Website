@@ -1,8 +1,8 @@
-import './About.css'
-
+import './About.css';
+import { motion } from 'framer-motion';
 function About() {
   return (
-    <section className="about container">
+    <motion.section className="about container" initial={{width:0}} animate={{width:'100%'}} exit={{x:'100%',transition:{duration:0.3,type:'tween'}}}>
       <h2 className="title text-center">About Me</h2>
       
       <p className="description">
@@ -11,7 +11,10 @@ function About() {
         user-friendly, and high-performance web applications.  
         My journey started from curiosity and quickly grew into a deep passion 
         for <strong>coding, problem-solving,</strong> and building interactive 
-        digital experiences.  
+        digital experiences.  You can also{" "}
+    <a href={'./Elfetni-Mourad-FlowCV-Resume-20250908 (1).pdf'} download className="cv-link">
+      📄 Download my CV
+    </a>.
       </p>
 
       <p className="description">
@@ -28,7 +31,7 @@ function About() {
         <span>React</span>
         <span>Git & GitHub</span>
       </div>
-    </section>
+    </motion.section>
   )
 }
 

@@ -7,10 +7,12 @@ import Myprojects from './components/Myprojects';
 import ContactMe from './components/ContactMe';
 import Footer from './components/Footer';
 import { BrowserRouter as Router, Routes, Route } from "react-router-dom";
+import {AnimatePresence} from 'framer-motion'
 
 function App() {
 
   return (
+  <AnimatePresence>
         <Router>
 
     <div className='app d-flex flex-column '>
@@ -29,7 +31,7 @@ function App() {
 
     </div>
         </Router>
-
+</AnimatePresence>  
   )
 }
 
