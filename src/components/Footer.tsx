@@ -5,12 +5,13 @@ import LinkedInIcon from '@mui/icons-material/LinkedIn';
 import XIcon from '@mui/icons-material/X';
 import FacebookIcon from '@mui/icons-material/Facebook';
 import Link from '@mui/material/Link';
+import "./footer.css";
 
 function Footer() {
   return (
-    <div>
+    <div className="footer">
 
-          <Divider style={{borderColor:'white'}}></Divider>
+          <Divider style={{borderColor:'white'}} className="divider"></Divider>
 <div className="data h-25 d-flex flex-row justify-content-between w-100">
     <h2>Mourad Elfetni.</h2>
     <div className="icons">

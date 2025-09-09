@@ -3,3 +3,24 @@
       width: 1100px;
 
 }
+
+@media (max-width: 500px) {
+.contact{
+flex-direction:column !important;
+width: 400px;
+padding: 0;
+        transform: translateX(-10%);
+
+height: 80vh;
+}
+.part-one{
+  width: 400px !important;
+}
+.part-two {
+  width: 355px;
+}
+.textFeild{
+    width: 370px !important;
+
+}
+}

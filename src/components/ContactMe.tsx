@@ -43,7 +43,7 @@ return (
   
   return (
     <motion.div initial={{width:0}} animate={{width:'100%'}} exit={{x:'100%',transition:{duration:0.3,type:'tween'}}}>
-   <div className="d-flex flex-row contact align-items-center">
+   <div className="d-flex flex-row  contact align-items-center">
        {submitted && name && email && message &&  
        <Modal
         open={submitted}
@@ -85,11 +85,11 @@ return (
       
     >
    
-        <TextField value={name} onChange={(e)=>setName(e.target.value)} id="standard-basic" label="Name" variant="standard" style={{width:"200%",color:'white'}}  />
+        <TextField value={name} onChange={(e)=>setName(e.target.value)} id="standard-basic" label="Name" variant="standard" style={{width:"200%",color:'white'}} className='textFeild'  />
 
-      <TextField value={email} onChange={(e)=>setEmail(e.target.value)} required id="standard-basic" type='email' label="Email" variant="standard" style={{width:"200%",color:'white'}} />
+      <TextField value={email} onChange={(e)=>setEmail(e.target.value)} required id="standard-basic" type='email' label="Email" variant="standard" style={{width:"200%",color:'white'}} className='textFeild'  />
    
-        <TextField
+        <TextField className='textFeild'
          style={{width:"200%",color:'white'}}
           id="standard-textarea"
           label="Message"

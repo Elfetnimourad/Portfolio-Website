@@ -14,3 +14,18 @@
 .navbar a:hover{
     color: rgba(0, 132, 255, 0.719) !important;
 }
+ @media (max-width: 500px) {
+.navbar{
+    display:none !important;
+}
+.container{
+    justify-content: space-between;
+
+        width: 409px !important;
+        transform: translateX(-8%) !important;
+}
+.moreVertIcon{
+    align-self: center !important;
+
+}
+}

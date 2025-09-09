@@ -1,9 +1,19 @@
 .home{
   display: flex;
   height: 80vh !important;
-  width: 200vh;
+  width: auto;
   align-items: center;
   color: white !important;
   justify-content: space-evenly !important;
 }
 
+@media (max-width: 500px) {
+  .home {
+    flex-direction: row;
+    justify-content: space-around;
+    text-align: left;
+    width:fit-content;
+  }
+
+ 
+}

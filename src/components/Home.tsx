@@ -9,9 +9,9 @@ function Home(){
     return(
           <motion.div initial={{opacity:0}} animate={{opacity:1}} exit={{opacity:0,transition:{duration:3,delay:10,type:'tween'}}}>
 
-        <div className="home d-flex flex-row h-120">
+<div className="home d-flex h-120 flex-column flex-sm-row ">
 
- <div>
+ <div className=''>
     <h1>Who Am I ?</h1>
     <p>I am Mourad Elfetni,a Front End Developper <br />
      Who Builds responsive,user-friendly,and <br /> Visaully Engaging Web Applications. 
@@ -21,6 +21,8 @@ function Home(){
           <motion.img
           style={{borderRadius:'50%',width:'300px',height:'300px',border:"5px solid white"}}
             src={profile}
+            className=''
+
             alt={'profile ...'}
             loading="lazy"
             whileHover={{boxShadow:"0 0 8px rgba(255, 255, 255, 255)"

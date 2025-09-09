@@ -45,5 +45,10 @@ body{
 .app{
 height: auto;
 color: wheat;
-width:100% !important;
+width:200vh !important;
+}
+ @media (max-width: 500px) {
+.app{
+  width: 400px !important;
+}
 }

@@ -68,3 +68,9 @@
   color: #8f94fb;
   text-decoration: underline;
 }
+@media (max-width: 500px) {
+.about{
+    height:100vh;
+    overflow-y:scroll !important;
+}
+}
