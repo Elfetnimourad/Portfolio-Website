@@ -18,7 +18,7 @@ function App() {
 
     <div className='app d-flex flex-column '>
  <Navbar/>
-
+<Home />
   <Routes>
           
 
