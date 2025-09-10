@@ -19,7 +19,7 @@
 }
  @media (max-width: 500px) {
     .moreVertIcon{
-    display:flex;
+    display:flex !important;
 }
 .navbar{
     display:none !important;
