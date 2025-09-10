@@ -28,9 +28,9 @@ function ContactMe() {
       setSubmitted(true)
       if(res.ok && submitted) {
 return (
-  <p>
-      Thanks for joining.
-    </p>
+  
+     alert('Thanks for joining.') 
+
 )
   }
     }catch (err){
