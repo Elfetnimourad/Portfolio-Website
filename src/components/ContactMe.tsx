@@ -10,10 +10,10 @@ import { motion } from 'framer-motion';
 
  
 function ContactMe() {
-  const[name,setName] = useState("morad");
-  const[email,setEmail] =useState('moradtao@gmail.com');
-  const[message,setMessage] = useState("fffffffffff");
-  const [submitted,setSubmitted] = useState(true);
+  const[name,setName] = useState("");
+  const[email,setEmail] =useState('');
+  const[message,setMessage] = useState("");
+  const [submitted,setSubmitted] = useState(false);
    const  handleSubmit = async(e:React.FormEvent)=>{
     e.preventDefault();
     try{
