@@ -50,6 +50,7 @@ return (
         onClose={()=>setSubmitted(false)}
         aria-labelledby="parent-modal-title"
         aria-describedby="parent-modal-description"
+        className="modal"
       >
         <Box sx={{width: 400,  boxShadow: 24,
   pt: 2,

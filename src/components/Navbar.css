@@ -14,18 +14,26 @@
 .navbar a:hover{
     color: rgba(0, 132, 255, 0.719) !important;
 }
+.moreVertIcon{
+    display:none !important;
+}
  @media (max-width: 500px) {
+    .moreVertIcon{
+    display:flex;
+}
 .navbar{
     display:none !important;
 }
 .container{
     justify-content: space-between;
-
         width: 409px !important;
         transform: translateX(-8%) !important;
 }
 .moreVertIcon{
     align-self: center !important;
 
+}
+.menuItem:hover{
+background-color: rgb(251, 255, 0) !important;
 }
 }
