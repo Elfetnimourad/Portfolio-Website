@@ -10,23 +10,21 @@ import { motion } from 'framer-motion';
 
  
 function ContactMe() {
-  const[name,setName] = useState("");
-  const[email,setEmail] =useState('');
-  const[message,setMessage] = useState("");
-  const [submitted,setSubmitted] = useState(false);
+  const[name,setName] = useState("morad");
+  const[email,setEmail] =useState('moradtao@gmail.com');
+  const[message,setMessage] = useState("fffffffffff");
+  const [submitted,setSubmitted] = useState(true);
    const  handleSubmit = async(e:React.FormEvent)=>{
     e.preventDefault();
     try{
       const res = await fetch('https://formspree.io/f/myzddqzj',{
         method:'POST',
-headers:{
-  'Content-Type':'application/json'
-},
-body:JSON.stringify({name,email,message})
+          headers:{
+              'Content-Type':'application/json'
+           },
+          body:JSON.stringify({name,email,message})
       })
-      setEmail("");
-      setName('');
-      setMessage('')
+      
       setSubmitted(true)
       if(res.ok && submitted) {
 return (
@@ -82,7 +80,6 @@ return (
       noValidate
       autoComplete="off"
       className='d-flex flex-column'
-      onSubmit={handleSubmit}
       
     >
    
@@ -101,7 +98,7 @@ required
           value={message} onChange={(e)=>setMessage(e.target.value)}
         />
        
-      <Button type="submit"  variant="contained" endIcon={<SendIcon />} style={{justifySelf:"flex-end"}}>
+      <Button variant="contained" endIcon={<SendIcon />} style={{justifySelf:"flex-end"}} onClick={handleSubmit}>
     Send
       </Button>
     </Box>   
