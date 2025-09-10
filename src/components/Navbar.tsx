@@ -53,15 +53,15 @@ function Navbar() {
                     <Link to={"/"} style={{textDecoration:"none",color:'black'}}>Home  </Link>
 
           </MenuItem>
-      <MenuItem key={"About"} selected onClick={handleClose} className="menuItem">
+      <MenuItem key={"About"}  onClick={handleClose} className="menuItem">
         <Link to={"/About"} style={{textDecoration:"none",color:'black'}}>About Me </Link>
 
           </MenuItem>
-           <MenuItem key={"Myprojects"} selected onClick={handleClose} className="menuItem">
+           <MenuItem key={"Myprojects"}  onClick={handleClose} className="menuItem">
         <Link to={"/Myprojects"} style={{textDecoration:"none",color:'black'}}>My Projects</Link>
 
           </MenuItem>
-           <MenuItem key={"ContactMe"} selected onClick={handleClose} className="menuItem">
+           <MenuItem key={"ContactMe"}  onClick={handleClose} className="menuItem">
         <Link to={"/ContactMe"} style={{textDecoration:"none",color:'black'}}>Contact Me</Link>
 
           </MenuItem>
