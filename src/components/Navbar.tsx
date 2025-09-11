@@ -6,9 +6,11 @@ import MoreVertIcon from '@mui/icons-material/MoreVert';
 import IconButton from '@mui/material/IconButton';
 import MenuItem from '@mui/material/MenuItem';
 import Menu from '@mui/material/Menu';
-
+import { useLocation } from "react-router-dom";
+import Home from "./Home";
 
 function Navbar() {
+  const location = useLocation()
     const [anchorEl, setAnchorEl] = useState<null | HTMLElement>(null);
   const open = Boolean(anchorEl);
   const handleClick = (event: React.MouseEvent<HTMLElement>) => {
@@ -18,6 +20,7 @@ function Navbar() {
     setAnchorEl(null);
   };
   return (
+    <>
     <motion.div className='d-flex flex-row w-100 container' initial={{x:-250}} animate={{x:0}} transition={{type:'tween'}}>
 <h4 className='flex-1'>Mourad Elfetni.</h4>
 <IconButton
@@ -50,7 +53,7 @@ function Navbar() {
       >
         
           <MenuItem key={"Home"} selected={true} onClick={handleClose} className="menuItem">
-                    <Link to={"/"} style={{textDecoration:"none",color:'black'}}>Home  </Link>
+                    <Link to={"/Portfolio-Website"} style={{textDecoration:"none",color:'black'}}>Home  </Link>
 
           </MenuItem>
       <MenuItem key={"About"}  onClick={handleClose} className="menuItem">
@@ -67,13 +70,14 @@ function Navbar() {
           </MenuItem>
       </Menu>
     <div className="d-flex flex-row navbar flex-4">
-        <Link to={"/"}  style={{textDecoration:"none",color:'white'}}>Home  </Link>
+        <Link to={"/Portfolio-Website"}  style={{textDecoration:"none",color:'white'}}>Home  </Link>
         <Link to={"/About"} style={{textDecoration:"none",color:'white'}}>About Me </Link>
         <Link to={"/Myprojects"} style={{textDecoration:"none",color:'white'}}>My Projects</Link>
         <Link to={"/ContactMe"} style={{textDecoration:"none",color:'white'}}>Contact Me</Link>
     </div>
         </motion.div>
-
+        {location.pathname === "/" && <Home />}
+</>
   )
 }
 
