@@ -14,19 +14,16 @@ function App() {
 
   return (
   <AnimatePresence>
-        <Router >
-
+  <Router basename="/Portfolio-Website">
     <div className='app d-flex flex-column '>
  <Navbar/>
   <Routes>
-
-        <Route path="/Portfolio-Website" element={<Home />} />
+        <Route path="/" element={<Home />} />
         <Route path="About" element={<About />} />
         <Route path="Myprojects" element={<Myprojects />} />
-                <Route path="ContactMe" element={<ContactMe />} />
-      </Routes>
+        <Route path="ContactMe" element={<ContactMe />} />
+  </Routes>
         <Footer/>
-
     </div>
         </Router>
 </AnimatePresence>  
