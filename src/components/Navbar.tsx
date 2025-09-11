@@ -49,7 +49,7 @@ function Navbar() {
         }}
       >
         
-          <MenuItem key={"Home"} selected onClick={handleClose} className="menuItem">
+          <MenuItem key={"Home"} selected={true} onClick={handleClose} className="menuItem">
                     <Link to={"/Portfolio-Website"} style={{textDecoration:"none",color:'black'}}>Home  </Link>
 
           </MenuItem>
