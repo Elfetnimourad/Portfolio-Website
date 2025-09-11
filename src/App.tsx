@@ -14,7 +14,7 @@ function App() {
 
   return (
   <AnimatePresence>
-        <Router basename="/Portfolio-Website">
+        <Router >
 
     <div className='app d-flex flex-column '>
  <Navbar/>
