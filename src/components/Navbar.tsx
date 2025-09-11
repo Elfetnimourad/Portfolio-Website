@@ -53,23 +53,23 @@ function Navbar() {
 
           </MenuItem>
       <MenuItem key={"About"}  onClick={handleClose} className="menuItem">
-        <Link to={"/About"} style={{textDecoration:"none",color:'black'}}>About Me </Link>
+        <Link to={"About"} style={{textDecoration:"none",color:'black'}}>About Me </Link>
 
           </MenuItem>
            <MenuItem key={"Myprojects"}  onClick={handleClose} className="menuItem">
-        <Link to={"/Myprojects"} style={{textDecoration:"none",color:'black'}}>My Projects</Link>
+        <Link to={"Myprojects"} style={{textDecoration:"none",color:'black'}}>My Projects</Link>
 
           </MenuItem>
            <MenuItem key={"ContactMe"}  onClick={handleClose} className="menuItem">
-        <Link to={"/ContactMe"} style={{textDecoration:"none",color:'black'}}>Contact Me</Link>
+        <Link to={"ContactMe"} style={{textDecoration:"none",color:'black'}}>Contact Me</Link>
 
           </MenuItem>
       </Menu>
     <div className="d-flex flex-row navbar flex-4">
         <Link to={"/Portfolio-Website"}  style={{textDecoration:"none",color:'white'}}>Home  </Link>
-        <Link to={"/About"} style={{textDecoration:"none",color:'white'}}>About Me </Link>
-        <Link to={"/Myprojects"} style={{textDecoration:"none",color:'white'}}>My Projects</Link>
-        <Link to={"/ContactMe"} style={{textDecoration:"none",color:'white'}}>Contact Me</Link>
+        <Link to={"About"} style={{textDecoration:"none",color:'white'}}>About Me </Link>
+        <Link to={"Myprojects"} style={{textDecoration:"none",color:'white'}}>My Projects</Link>
+        <Link to={"ContactMe"} style={{textDecoration:"none",color:'white'}}>Contact Me</Link>
     </div>
         </motion.div>
 
