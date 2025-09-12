@@ -11,7 +11,7 @@ import bookStore from "../images/bookStore.jpg";
 import Note from "../images/Note.jpg";
 import weatherApp from "../images/weatherApp.jpg";
 import todolist from "../images/todolist.jpg";
-import ticTacToeImg from "../images/ticTacToeImg.jpg";
+import ticTacToeImg from "../images/TicTacToeImg.jpg";
 
 const projects = [
   { id: 1,name:'Pomodoro', title: "React + TypeScript + ...", image: Pomodoro },
