@@ -1,5 +1,5 @@
 import { useState } from "react";
-import './navbar.css';
+import './Navbar.css';
 import { Link, useLocation } from "react-router-dom";
 import { motion } from 'framer-motion';
 import MoreVertIcon from '@mui/icons-material/MoreVert';
