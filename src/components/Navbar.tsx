@@ -1,6 +1,6 @@
-import {useState} from "react";
+import { useState } from "react";
 import './navbar.css';
-import { Link } from "react-router-dom";
+import { Link, useLocation } from "react-router-dom";
 import { motion } from 'framer-motion';
 import MoreVertIcon from '@mui/icons-material/MoreVert';
 import IconButton from '@mui/material/IconButton';
@@ -8,18 +8,27 @@ import MenuItem from '@mui/material/MenuItem';
 import Menu from '@mui/material/Menu';
 
 function Navbar() {
-    const [anchorEl, setAnchorEl] = useState<null | HTMLElement>(null);
+  const [anchorEl, setAnchorEl] = useState<null | HTMLElement>(null);
   const open = Boolean(anchorEl);
-  const handleClick = (event: React.MouseEvent<HTMLElement>) => {
+  const location = useLocation(); // <-- to check active route
+
+  const handleClick = (event:React.MouseEvent<HTMLElement>) => {
     setAnchorEl(event.currentTarget);
   };
   const handleClose = () => {
     setAnchorEl(null);
   };
+
   return (
-    <motion.div className='d-flex flex-row w-100 container' initial={{x:-250}} animate={{x:0}} transition={{type:'tween'}}>
-<h4 className='flex-1'>Mourad Elfetni.</h4>
-<IconButton
+    <motion.div
+      className="d-flex flex-row w-100 container"
+      initial={{ x: -250 }}
+      animate={{ x: 0 }}
+      transition={{ type: 'tween' }}
+    >
+      <h4 className="flex-1">Mourad Elfetni.</h4>
+
+      <IconButton
         aria-label="more"
         id="long-button"
         aria-controls={open ? 'long-menu' : undefined}
@@ -28,52 +37,64 @@ function Navbar() {
         onClick={handleClick}
         className="moreVertIcon"
       >
-        <MoreVertIcon style={{color:"white"}} />
+        <MoreVertIcon style={{ color: "white" }} />
       </IconButton>
-       <Menu
+
+      <Menu
         id="long-menu"
         anchorEl={anchorEl}
         open={open}
         onClose={handleClose}
         slotProps={{
-          paper: {
-            style: {
-              maxHeight: "auto",
-              width: '20ch',
-            },
-          },
-          list: {
-            'aria-labelledby': 'long-button',
-          },
+          paper: { style: { width: '20ch' } },
+          list: { 'aria-labelledby': 'long-button' },
         }}
       >
-        
-          <MenuItem key={"Home"} selected={true} onClick={handleClose} className="menuItem">
-                    <Link to={"/"} style={{textDecoration:"none",color:'black'}}>Home  </Link>
+        <MenuItem
+          key="Home"
+          selected={location.pathname === "/"}
+          onClick={handleClose}
+          className="menuItem"
+        >
+          <Link to="/" style={{ textDecoration: "none", color: 'black' }}>Home</Link>
+        </MenuItem>
 
-          </MenuItem>
-      <MenuItem key={"About"}  onClick={handleClose} className="menuItem">
-        <Link to={"About"} style={{textDecoration:"none",color:'black'}}>About Me </Link>
+        <MenuItem
+          key="About"
+          selected={location.pathname === "/about"}
+          onClick={handleClose}
+          className="menuItem"
+        >
+          <Link to="/about" style={{ textDecoration: "none", color: 'black' }}>About Me</Link>
+        </MenuItem>
 
-          </MenuItem>
-           <MenuItem key={"Myprojects"}  onClick={handleClose} className="menuItem">
-        <Link to={"Myprojects"} style={{textDecoration:"none",color:'black'}}>My Projects</Link>
+        <MenuItem
+          key="Myprojects"
+          selected={location.pathname === "/myprojects"}
+          onClick={handleClose}
+          className="menuItem"
+        >
+          <Link to="/myprojects" style={{ textDecoration: "none", color: 'black' }}>My Projects</Link>
+        </MenuItem>
 
-          </MenuItem>
-           <MenuItem key={"ContactMe"}  onClick={handleClose} className="menuItem">
-        <Link to={"ContactMe"} style={{textDecoration:"none",color:'black'}}>Contact Me</Link>
-
-          </MenuItem>
+        <MenuItem
+          key="ContactMe"
+          selected={location.pathname === "/contactme"}
+          onClick={handleClose}
+          className="menuItem"
+        >
+          <Link to="/contactme" style={{ textDecoration: "none", color: 'black' }}>Contact Me</Link>
+        </MenuItem>
       </Menu>
-    <div className="d-flex flex-row navbar flex-4">
-        <Link to={"/"}  style={{textDecoration:"none",color:'white'}}>Home  </Link>
-        <Link to={"About"} style={{textDecoration:"none",color:'white'}}>About Me </Link>
-        <Link to={"Myprojects"} style={{textDecoration:"none",color:'white'}}>My Projects</Link>
-        <Link to={"ContactMe"} style={{textDecoration:"none",color:'white'}}>Contact Me</Link>
-    </div>
-        </motion.div>
 
-  )
+      <div className="d-flex flex-row navbar flex-4">
+        <Link to="/" style={{ textDecoration: "none", color: 'white' }}>Home</Link>
+        <Link to="/about" style={{ textDecoration: "none", color: 'white' }}>About Me</Link>
+        <Link to="/myprojects" style={{ textDecoration: "none", color: 'white' }}>My Projects</Link>
+        <Link to="/contactme" style={{ textDecoration: "none", color: 'white' }}>Contact Me</Link>
+      </div>
+    </motion.div>
+  );
 }
 
-export default Navbar
+export default Navbar;
